@@ -9,7 +9,7 @@ import { RegisterService } from '../register.service';
   styleUrls: ['./renta.component.scss']
 })
 export class RentaComponent implements OnInit {
-  registerData = {};
+  registerData: any = {};
   rentaForm = this.fb.group({
     renta: [null, Validators.required]
   });
