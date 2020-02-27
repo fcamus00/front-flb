@@ -1,0 +1,46 @@
+<div class="account-content" >
+  <div class="form-container" >
+    <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+      <mat-card class="shipping-card">
+        <mat-card-header>
+          <mat-card-title>Ingresa tus datos</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Rut" formControlName="rut">
+                <mat-error *ngIf="accountForm.controls['rut'].hasError('required')">
+                  El campo rut es <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Celular" formControlName="celular">
+                <mat-error *ngIf="accountForm.controls['celular'].hasError('required')">
+                  El campo Celular es <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <mat-form-field class="full-width">
+                <input matInput placeholder="Correo Electrónico" formControlName="email">
+                <mat-error *ngIf="accountForm.controls['email'].hasError('required')">
+                  El campo Correo Electrónico es <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit">Submit</button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
+  </div>
+</div>
